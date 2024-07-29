@@ -1,0 +1,225 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+.logo span{
+    color: #fb911f;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.btn-reserve{
+    padding: 10px 20px;
+    background: #92867a;
+   margin-top: -10px;
+   text-transform:uppercase ;
+}
+
+.btn-reserve:hover{
+    background: #d87710;
+    transition: ease-out;
+}
+
+header .navbar li a:hover{
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+}
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.cuisinedecheznous.net/wp-content/uploads/2020/12/129340660_146374907274335_3374892940906900406_n.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banniere .contenu{
+    max-width: 70%;
+    text-align: center;
+}
+.banniere .contenu h2{
+    color: #fff;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+.contenu p:nth-child(2){
+    color: #ffff;
+    font-size: 1.2em;
+}
+
+.container {
+    background-color: #fff;
+    padding: 60px 0 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+
+}
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+}
+.container form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.container form button {
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.container form button:hover {
+    background-color: #218838;
+}
+.switch-form {
+    text-align: center;
+    margin-top: 10px;
+}
+.switch-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --main-bg-color: #fff;
+    --accent-color: #fb911f;
+    --hover-color: #563434;
+    --slate-black: #000;
+    --smoth-pink: #ffd6d6;
+}
+
+
+.footer {
+    background: #fb911f;
+    color: black;
+    font-size: 14px;
+    padding: 60px 0 20px;
+  }
+  .footer a{
+    color: #000;
+  }
+  .footer p {
+    color: white;
+  }
+  
+  .footer h3 {
+    color: var(--main-bg-color);
+    margin-bottom: 20px;
+  }
+  
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3,
+  .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-col-1 {
+    flex-basis: 30px;
+  }
+  
+  .footer-col-2 {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-col-3,
+  .footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .app-logo {
+    margin-top: 20px;
+  }
+  
+  .app-logo img {
+    width: 140px;
+  }
+  
+.copyright{
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0,0,0, 0.1);
+    background: rgba(228,222,222,);
+    text-align: center;
+}
+
+.copyright p:nth-child(1){
+    color: #333;
+}
+
+.copyright a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}

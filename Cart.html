@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Menu.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Garba Accueil</title>
+    <style>
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fb911f;
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 250px; /* Ajustez la largeur selon vos besoins */
+}
+
+.cart h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Limite la hauteur pour éviter un affichage trop long */
+    overflow-y: auto;
+}
+
+.cart ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart ul li:last-child {
+    border-bottom: none;
+}
+
+.cart ul li button {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-total {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.cart button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+        
+.menu .box {
+            position: relative;
+}
+        .menu .box .add-to-cart {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: #fb911f;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="#banniere" class="logo"><span>G</span>arba Express</a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navbar">
+        <li><a href="index.html" onclick="toggleMenu();">ACCUEIL</a></li>
+        <li><a href="Menu.html" onclick="toggleMenu();">MENU</a></li>
+        <li><a href="#expert" onclick="toggleMenu();">EXPERT</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">CONTACT</a></li>
+    </ul>
+</header>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <h2 class="titre1"><span>B</span>ienvenue chez <span>G</span>arba Express</h2>
+        <p>Que Des Plats Délicieux. Découvrez les délices culinaires ivoiriens avec Garba Express. Nous apportons la saveur authentique de la Côte d'Ivoire directement à votre table.</p>
+    </div>
+</section>
+
+<!-- Ajoutez cette section pour le panier -->
+<div class="cart">
+    <h3>Panier</h3>
+    <ul id="cart-items"></ul>
+    <p class="cart-total">Total: <span id="cart-total">0</span> FCFA</p>
+    <button onclick="checkout()">Commander</button>
+</div>
+
+<section class="menu" id="menu">
+    <div class="titre">
+        <h2 class="titre-texte"><span>M</span>enu</h2>
+        <p>Explorez notre menu varié, comprenant des plats traditionnels ivoiriens, préparés avec des ingrédients frais et locaux. </p>
+    </div>
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+                <img src="https://mail.google.com/mail/u/0?ui=2&ik=25e0ca3c43&attid=0.0&permmsgid=msg-f:1805654923695149412&th=190ef99619c8d164&view=att&disp=safe" alt="">
+            </div>
+            <div class="text">
+                <h3>Garba portion Solo</h3>
+                <p>2,000 FCFA</p><br><br>
+                <button class="add-to-cart" data-name="Garba portion Solo" data-price="2000">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="https://mail.google.com/mail/u/0?ui=2&ik=25e0ca3c43&attid=0.3&permmsgid=msg-f:1805792930147599968&th=190f771a3b5c0660&view=att&disp=safe" style="object-fit: contain;" alt="">
+            </div>
+            <div class="text">
+                <h3>Garba portion Duo</h3>
+                <p>3,500 FCFA</p><br><br>
+                <button class="add-to-cart" data-name="Garba portion Duo" data-price="3500">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="https://mail.google.com/mail/u/0?ui=2&ik=25e0ca3c43&attid=0.1&permmsgid=msg-f:1805792930147599968&th=190f771a3b5c0660&view=att&disp=safe" style="object-fit: contain;" alt="">
+            </div>
+            <div class="text">
+                <h3>Garba portion Trio</h3>
+                <p>6,500 FCFA</p><br><br>
+                <button class="add-to-cart" data-name="Garba portion Trio" data-price="6500">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="https://mail.google.com/mail/u/0?ui=2&ik=25e0ca3c43&attid=0.1&permmsgid=msg-f:1805842408112954976&th=190fa41a37e89e60&view=att&disp=safe" alt="">
+            </div>
+            <div class="text">
+                <h3>Attieke Poisson</h3>
+                <p>3,000 FCFA</p><br><br>
+                <button class="add-to-cart" data-name="Attieke Poisson" data-price="3000">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="https://mail.google.com/mail/u/0?ui=2&ik=25e0ca3c43&attid=0.3&permmsgid=msg-f:1805842408112954976&th=190fa41a37e89e60&view=att&disp=safe" alt="">
+            </div>
+            <div class="text">
+                <h3>Attieke Gésier</h3>
+                <p>2,000 FCFA</p><br><br>
+                <button class="add-to-cart" data-name="Attieke Gésier" data-price="2000">Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+    <div class="titre">
+        <a href="#" class="btn1">COMMANDEZ !!!</a>
+    </div>
+    <br>
+</section>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Téléchargez notre application</h3>
+                <p>Téléchargez l'application pour Android et iOS</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="">
+                    <img src="images/app-store.png" alt="">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <a href="#banniere" class="logo">GARBA EXPRESS</a>
+            </div>
+            <div class="footer-col-4">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>WhatsApp</li>
+                    <li>+221 784577284</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>COPYRIGHT 2024 <a href="#banniere">GARBA EXPRESS</a> . TOUS DROITS RÉSERVÉS</p>
+    </div>
+</div>
+
+<script src="javascript.js"></script>
+</body>
+</html>

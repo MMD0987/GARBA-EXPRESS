@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Account.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>GARBA EXPRESS</title>
+<body>
+<header>
+    <a href="#banniere" class="logo"><span>G</span>arba Express</a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navbar">
+        <li><a href="index.html" onclick="toggleMenu();">ACCUEIL</a></li>
+        <li><a href="Menu.html" onclick="toggleMenu();">MENU</a></li>
+        <a href="#" class="btn-reserve"onclick="toggleMenu();">INSCRIPTION</a>
+    </ul>
+</header>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <h2 class="titre1">INSCRIPTION/CONNEXION</h2>
+    </div>
+</section>
+<div class="container">
+    <div id="inscription-form">
+        <h2>Inscription</h2>
+        <form>
+            <input type="text" placeholder="Nom d'utilisateur" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <input type="password" placeholder="Confirmer le mot de passe" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <div class="switch-form">
+            <span>Déjà inscrit? <a href="#" onclick="switchToLogin()">Connexion</a></span>
+        </div>
+    </div>
+    <div id="connexion-form" style="display: none;">
+        <h2>Connexion</h2>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div class="switch-form">
+            <span>Pas encore de compte? <a href="#" onclick="switchToSignup()">S'inscrire</a></span>
+        </div>
+    </div>
+</div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>
+            Download App for Android and ios mobile phone
+          </p>
+          <div class="app-logo">
+            <img src="images/play-store.png" alt="" />
+            <img src="images/app-store.png" alt="" />
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <a href="#banniere" class="logo">GARBA EXPRESS</a>
+        </div>
+
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Instagram</li>
+            <li>WhatsApp</li>
+            <li>+221 784577284</li>
+          </ul>
+        </div>
+      </div>
+    <div class="copyright">
+     <p>COPYRIGHT 2024 <a href="#banniere">GARBA EXPRESS</a> . TOUS DROITS RESERVES</p>
+ </div>
+  <script src="Account.js"></script>
+</body>
+</html>
